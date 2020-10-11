@@ -1,18 +1,7 @@
 <?php
+include ('conn.php');
 
-//
-class csv extends mysqli {
-
-    //connection method
-    function __construct()
-    {
-        parent::__construct("127.0.0.1","root","","file");
-        if ($this->connect_error){
-            echo "No connection:".$this->connect_error;
-
-        }
-
-    }
+class csv{
 
     //importing csv to mysqli
     public function import($file){
